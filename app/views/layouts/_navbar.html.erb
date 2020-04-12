@@ -1,0 +1,12 @@
+<nav class="navbar navbar-inverse">
+  
+
+      <%if user_signed_in?  && current_user.role == 'user' %>
+        <div class="profile">
+          <%=image_tag(current_user.image, style: 'width:50px;')%>
+        </div>
+
+      <%end%>
+<!--       <a class="navbar-brand" href="#">Welcome to Banking Management System</a>-->
+    
+</nav>

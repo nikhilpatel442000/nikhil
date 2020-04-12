@@ -1,0 +1,23 @@
+<div class = 'view'>  
+		<center>
+		Acount Deatils:
+		<table border = "1" align >
+		<thead>
+			<th>id</th>
+			<th>account number</th>
+			<th>balance</th>	
+			<th>email</th>	
+
+		</thead>
+		<tbody>
+		<tr>
+			<td><%= @account.id %></td>
+			<td><%= @account.account_no %></td>
+			<td><%= @account.balannce %></td>
+			<td><%= @account.user.email %></td>
+
+		</tr>
+		</tbody>
+		</table>
+		</center>
+</div>

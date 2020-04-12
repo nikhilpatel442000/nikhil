@@ -1,0 +1,21 @@
+<div class = 'view'>  
+	<center>
+		All transaction= Deatils:
+		<table border = "1" align >
+			<thead>
+				<th>id</th>
+				<th>account number</th>
+				<th>amount</th>	
+			</thead>
+			<tbody>
+			<% @transactions.each do |transaction| %>
+			<tr>
+				<td><%= transaction.id %></td>
+				<td><%= transaction.account.account_no %></td>
+				<td><%= transaction.amount %></td>
+			</tr>
+			<% end %>
+			</tbody>
+		</table>
+	</center>
+</div>

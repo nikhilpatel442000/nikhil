@@ -1,0 +1,27 @@
+<div class = 'view'>  
+	<center>
+	All Acount Deatils:
+	<table border = "1" align >
+	<thead>
+		<th>id</th>
+		<th>account number</th>
+		<th>balance</th>	
+		<th>email</th>	
+
+	</thead>
+	<tbody>
+	<% @accounts.each do |account| %>
+	<tr>
+		<td><%= account.id %></td>
+		<td><%= account.account_no %></td>
+		<td><%= account.balannce %></td>
+		<td><%= account.user.email %></td>
+		<td><%= link_to "delete" ,account_path(account.id),	 method: :delete %></td>
+
+
+	</tr>
+	<% end %>
+	</tbody>
+	</table>
+	</center>
+</div>

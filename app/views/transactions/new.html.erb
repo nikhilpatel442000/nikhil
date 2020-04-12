@@ -1,0 +1,12 @@
+<div class = 'view'>  
+	<%= form_for @transaction do |f| %>
+	  <%= f.label :to %><br />
+	  <%= f.select :account_id, options_for_account %><br />
+
+	  <%= f.label :amount %><br />
+	  <%= f.text_field :amount %><br />
+	  <%= f.hidden_field :from, :value => current_user.account.id %><br />  
+	  <%= f.hidden_field :user_id, :value => current_user.id %><br />  
+	  <%= f.submit %>
+	<% end %>
+</div>
